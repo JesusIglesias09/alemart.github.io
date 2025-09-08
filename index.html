@@ -37,11 +37,7 @@ nav a:hover{color:#00e5ff;}
   height:auto;
   z-index:10;
 }
-.hero-logo img {
-  width:100%;
-  height:auto;
-  display:block;
-}
+.hero-logo img { width:100%; height:auto; display:block; }
 
 .hero h1{font-size:3.5em;margin-bottom:20px;}
 .hero p{font-size:1.25em;margin-bottom:40px;}
@@ -55,11 +51,11 @@ section.visible{opacity:1;transform:translateY(0);}
 section h2{font-size:2.5em;margin-bottom:40px;color:#007c91;text-align:center;}
 
 .two-columns{display:flex;gap:30px;flex-wrap:wrap;align-items:center;position:relative;}
-.two-columns .col{flex:1;min-width:300px;z-index:2;opacity:0;transform:translateY(30px);transition:all .6s ease;}
+.two-columns .col{flex:1;opacity:0;transform:translateY(30px);transition:all .6s ease;}
 .two-columns .col.visible{opacity:1;transform:translateY(0);}
-.two-columns .image-col{flex:1;min-width:300px;position:relative;opacity:0;transform:translateY(30px);transition:all .6s ease;}
+.two-columns .image-col{flex:1;opacity:0;transform:translateY(30px);transition:all .6s ease;}
 .two-columns .image-col.visible{opacity:1;transform:translateY(0);}
-.two-columns .image-col img{max-height:450px;width:auto;display:block;margin:0 auto;border-radius:20px;box-shadow:0 8px 20px rgba(0,0,0,0.15);transition:transform .3s;}
+.two-columns .image-col img{max-height:450px;width:100%;max-width:100%;height:auto;display:block;margin:0 auto;border-radius:20px;box-shadow:0 8px 20px rgba(0,0,0,0.15);transition:transform .3s;}
 .two-columns .image-col img:hover{transform:scale(1.05);}
 
 .about p{margin-bottom:20px;font-size:1.15em;line-height:1.6;}
@@ -85,14 +81,16 @@ footer{position:fixed;bottom:0;left:0;width:100%;text-align:center;padding:20px 
 footer a{color:#fff;text-decoration:none;margin:0 10px;}
 footer a:hover{text-decoration:underline;}
 
+/* RESPONSIVE FIX PARA MOVILES */
+@media(max-width:900px){
+  .two-columns{flex-direction:column;gap:20px;}
+  .two-columns .col,.two-columns .image-col{width:100%;max-width:100%;}
+  .cards{grid-template-columns:1fr;padding:0 10px;}
+}
 @media(max-width:600px){
   .hero-logo { width:80px; top:40px; }
   .hero h1{font-size:2.2em;}
   .hero p{font-size:1.1em;}
-}
-@media(max-width:900px){
-  .two-columns{flex-direction:column}
-  .cards{grid-template-columns:1fr;padding:0 10px;}
 }
 </style>
 </head>
