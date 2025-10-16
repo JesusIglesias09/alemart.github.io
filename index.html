@@ -6,6 +6,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 
+/* 🔹 Efecto de resplandor azul en imágenes de Servicios y Beneficios */
+#servicios .image-col img,
+#beneficios .image-col img {
+  box-shadow: 0 0 25px #00e5ff; /* mismo brillo azul */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 25px;
+}
+
+/* 🔹 Efecto más intenso al pasar el mouse */
+#servicios .image-col img:hover,
+#beneficios .image-col img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px #00e5ff; /* resplandor más fuerte */
+}
+
+
 /* 🔹 Efecto de sombra azul en todos los títulos principales (h2) */
 section h2 {
   font-size: 2.5em;
@@ -787,5 +803,8 @@ setInterval(updateHeroBackground, 6000);
     }
   }
 </style>
+
+
+
 </body>
 </html>
